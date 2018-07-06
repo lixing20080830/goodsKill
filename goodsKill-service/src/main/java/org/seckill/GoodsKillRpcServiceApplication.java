@@ -15,13 +15,13 @@ public class GoodsKillRpcServiceApplication {
     private static Logger logger = LoggerFactory.getLogger(GoodsKillRpcServiceApplication.class);
 
     public static void main(String[] args) throws IOException {
-        logger.info(">>>>> goodsKill-rpc-service 正在启动 <<<<<");
+        logger.info("****** goodsKill-rpc-service 正在启动 ******");
         AbstractApplicationContext context= new ClassPathXmlApplicationContext(
                 "classpath*:META-INF/spring/spring-*.xml");
         //程序退出前优雅关闭JVM
         context.registerShutdownHook();
         context.start();
-        logger.info(">>>>> goodsKill-rpc-service 启动完成 <<<<<");
+        logger.info("****** goodsKill-rpc-service 启动完成 ******");
     }
 
 }
