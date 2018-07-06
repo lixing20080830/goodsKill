@@ -66,6 +66,7 @@ public class RedisDao {
 
     public String put(String phoneNum, String phoneCode) {
         Jedis jedis = jedisPool.getResource();
+        jedis.auth("lixing");
         try {
             jedis.append(phoneNum, phoneCode);
             jedis.setex(phoneCode, 5 * 60, phoneCode);
